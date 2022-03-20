@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Skills</title>
+</head>
+
+<body>
+
+	<h2>Найдено со скиллом {{ skill }}: {{ candidates_len }}</h2>
+
+	{% if candidates_len > 0 %}
+		{% for candidate in candidates %}
+		<p><a href="/candidate/{{ candidate.id }}" style="text-decoration: none">{{ candidate.name }}</a></p>
+		{% endfor %}
+
+	{% else %}
+		<p>No such skill</p>
+
+	{% endif %}
+</body>
+
+</html>

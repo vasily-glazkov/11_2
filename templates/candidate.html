@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ candidate.name }}</title>
+</head>
+
+<body>
+<div class="card">
+	{% if 'not_found' in candidate.keys() %}
+        <h1>{{ candidate.not_found }}</h1>
+	{% else %}
+		<h1>{{ candidate.name }}</h1>
+		<p>Position: {{ candidate.position }}</p>
+		<img src="{{ candidate.picture }}" alt="candidate picture" width="200/">
+		<p>Skills: {{ candidate.skills }}</p>
+	{% endif %}
+</div>
+
+<footer><a href="/" style="text-decoration: none">Back to main page</a></footer>
+</body>
+
+</html>
